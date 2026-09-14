@@ -1,0 +1,3 @@
+airline,from,to,Class,stop,day_of_week,arrival_time,depature_time,duration_minutes,days_left,predicted_price_inr,exchange_rate,predicted_price_ngn,actual_price
+Vistara,Chennai,Hyderabad,Economy,non-stop,Monday,Morning,Night,120.0,10,6688.203521056937,18.5,123731.77,0.0
+Vistara,Chennai,Mumbai,Business,1-stop,Tuesday,Morning,Night,60.0,3,31981.656750057664,18.5,591660.65,0.0

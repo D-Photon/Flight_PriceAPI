@@ -15,7 +15,7 @@ import requests
 from pydantic import BaseModel
 
 
-model_path = 'flght_price_lgb_model.pkl'
+model_path = 'flight_price_model3.pkl'
 FEEDBACK_file = 'Incoming_data.csv'
 API_KEY = os.getenv("api_key")
 
@@ -104,6 +104,8 @@ def predict(data:FlightInput):
     }
 
 if __name__=='__main__':
+    port = int(os.environ.get("PORT", 8000))
+
     print(f"Loaded Model '{model_path}'.")
-    print("Starting FAstAPI server on http://127.0.0.1:8000 (docs at /docs) ...")
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    print("Starting FAstAPI server on {port} ...")
+    uvicorn.run(app, host="0.0.0.0", port=port)
